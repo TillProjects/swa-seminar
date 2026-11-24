@@ -53,7 +53,7 @@ Dazu gehören:
 - relevante Stakeholder und deren Erwartungshaltung.
 ::::
 
-## Aufgabenstellung {#_aufgabenstellung}
+## Aufgabenstellung
 
 ### Produktkarton
 ![Produktkarton Voya](images/voya-produktkarton.png)
@@ -138,7 +138,7 @@ Szenarien, geordnet nach Prioritäten.
 ::::
 ::::::::::
 
-## Stakeholder {#_stakeholder}
+## Stakeholder
 
 
 Tabelle mit Rollen- oder Personennamen, sowie deren Erwartungshaltung
