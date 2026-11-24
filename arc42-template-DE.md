@@ -55,53 +55,40 @@ Dazu gehören:
 
 ## Aufgabenstellung {#_aufgabenstellung}
 
-:::::::::::: sidebar
-::: title
-:::
+### Produktkarton
+![Produktkarton Voya](images/voya-produktkarton.png)
+**Voya – Alle Reisen an einem Ort**
 
-:::: formalpara
-::: title
-Inhalt
-:::
+#### Zweck
 
-Kurzbeschreibung der fachlichen Aufgabenstellung, treibenden Kräfte,
-Extrakt (oder Abstract) der Anforderungen. Verweis auf (hoffentlich
-vorliegende) Anforderungsdokumente (mit Versionsbezeichnungen und
-Ablageorten).
-::::
+Voya ist eine Anwendung, die Reisenden dabei hilft, ihre 
+Buchungen an einem Ort zu verwalten. Statt zwischen verschiedenen 
+Apps und E-Mails wechseln zu müssen, können Nutzer alle wichtigen 
+Informationen zu ihren Reisen in einer zentralen Übersicht finden.
 
-:::: formalpara
-::: title
-Motivation
-:::
 
-Aus Sicht der späteren Nutzung ist die Unterstützung einer fachlichen
-Aufgabe oder Verbesserung der Qualität der eigentliche Beweggrund, ein
-neues System zu schaffen oder ein bestehendes zu modifizieren.
-::::
+#### Funktionalitäten
 
-:::: formalpara
-::: title
-Form
-:::
+- Automatischer Import von Flug-, Hotel- und Mietwagenbuchungen
+  über verknüpfte Kundenkonten
+- Manuelles Hinzufügen von bestehenden Reservierungen
+- Gruppierung der Buchungen nach einzelnen Reisen
+- Automatisches Ausblenden abgeschlossener Reisen aus dem Dashboard
+- Teilen von Reiseinformationen über soziale Medien
+- Nutzung über Webbrowser und mobile Endgeräte
+- Unterstützung internationaler Reisen
 
-Kurze textuelle Beschreibung, eventuell in tabellarischer Use-Case Form.
-Sofern vorhanden, sollte die Aufgabenstellung Verweise auf die
-entsprechenden Anforderungsdokumente enthalten.
-::::
 
-Halten Sie diese Auszüge so knapp wie möglich und wägen Sie Lesbarkeit
-und Redundanzfreiheit gegeneinander ab.
+#### Wesentliche Features
 
-:::: formalpara
-::: title
-Weiterführende Informationen
-:::
+1. **Reiseübersicht:** Alle wichtigen Buchungsinformationen 
+   werden übersichtlich an einem Ort dargestellt.
 
-Siehe [Anforderungen und Ziele](https://docs.arc42.org/section-1/) in
-der online-Dokumentation (auf Englisch!).
-::::
-::::::::::::
+2. **Anbindung von Reiseanbietern:** Bestehende Buchungen 
+   können automatisch aus den verbundenen Konten übernommen werden.
+
+3. **Reiseorganisation:** Nutzer können ihre Buchungen 
+   hinzufügen, bearbeiten und nach Reisen gruppieren.
 
 ## Qualitätsziele {#_qualitätsziele}
 
@@ -153,50 +140,9 @@ Szenarien, geordnet nach Prioritäten.
 
 ## Stakeholder {#_stakeholder}
 
-:::::::::: sidebar
-::: title
-:::
-
-:::: formalpara
-::: title
-Inhalt
-:::
-
-Expliziter Überblick über die Stakeholder des Systems -- über alle
-Personen, Rollen oder Organisationen --, die
-::::
-
-- die Architektur kennen sollten oder
-
-- von der Architektur überzeugt werden müssen,
-
-- mit der Architektur oder dem Code arbeiten (z.B. Schnittstellen
-  nutzen),
-
-- die Dokumentation der Architektur für ihre eigene Arbeit benötigen,
-
-- Entscheidungen über das System und dessen Entwicklung treffen.
-
-:::: formalpara
-::: title
-Motivation
-:::
-
-Sie sollten die Projektbeteiligten und -betroffenen kennen, sonst
-erleben Sie später im Entwicklungsprozess Überraschungen. Diese
-Stakeholder bestimmen unter anderem Umfang und Detaillierungsgrad der
-von Ihnen zu leistenden Arbeit und Ergebnisse.
-::::
-
-:::: formalpara
-::: title
-Form
-:::
 
 Tabelle mit Rollen- oder Personennamen, sowie deren Erwartungshaltung
 bezüglich der Architektur und deren Dokumentation.
-::::
-::::::::::
 
 +-----------------+-----------------+-----------------------------------+
 | Rolle           | Kontakt         | Erwartungshaltung                 |
@@ -205,6 +151,118 @@ bezüglich der Architektur und deren Dokumentation.
 +-----------------+-----------------+-----------------------------------+
 | *\<Rolle-2\>*   | *\<Kontakt-2\>* | *\<Erwartung-2\>*                 |
 +-----------------+-----------------+-----------------------------------+
+
+### Personas
+
+Um die Bedürfnisse verschiedener Nutzergruppen besser zu verstehen, 
+haben wir drei Personas erstellt. Sie dienen als Grundlage für 
+spätere Architekturentscheidungen und Qualitätsanforderungen.
+
+#### Persona 1: Anna Müller
+
+**Rolle:** Geschäftsreisende  
+**Alter:** 35 Jahre  
+**Beruf:** Unternehmensberaterin  
+**Wohnort:** Hamburg  
+**Familienstand:** Ledig  
+
+*"Ich möchte meine Buchungen schnell finden, ohne jedes Mal 
+verschiedene Apps öffnen zu müssen."*
+
+**Ziele und Motivation**
+
+- Alle Reisebuchungen an einem Ort verwalten
+- Schnell auf aktuelle Buchungsinformationen zugreifen
+- Auch bei mehreren Geschäftsreisen den Überblick behalten
+
+**Pain Points und Frustrationen**
+
+- Buchungsbestätigungen sind auf verschiedene Apps und E-Mails verteilt
+- Wenig Zeit, um unterwegs nach Informationen zu suchen
+- Nicht immer eine stabile Internetverbindung
+
+**Verhalten und Technik**
+
+Anna reist mehrmals im Monat beruflich. Sie nutzt ihr Smartphone 
+regelmäßig und kennt sich gut mit digitalen Anwendungen aus.
+
+**Bezug zum System**
+
+Für Anna sind kurze Ladezeiten, aktuelle Buchungsinformationen 
+und eine zuverlässige Verfügbarkeit des Systems besonders wichtig.
+
+---
+
+#### Persona 2: Markus Becker
+
+**Rolle:** Familienurlauber  
+**Alter:** 42 Jahre  
+**Beruf:** Lehrer  
+**Wohnort:** Berlin  
+**Familienstand:** Verheiratet, zwei Kinder  
+
+*"Ich möchte im Urlaub nicht ständig nach Buchungsbestätigungen 
+suchen müssen."*
+
+**Ziele und Motivation**
+
+- Familienreisen möglichst einfach organisieren
+- Alle Reservierungen einer Reise auf einen Blick sehen
+- Fehlende Buchungen selbst hinzufügen können
+
+**Pain Points und Frustrationen**
+
+- Viele Buchungsbestätigungen von unterschiedlichen Anbietern
+- Unübersichtliche Informationen bei größeren Familienreisen
+- Komplizierte Anwendungen mit zu vielen Funktionen
+
+**Verhalten und Technik**
+
+Markus verreist ein- bis zweimal im Jahr mit seiner Familie. 
+Er nutzt digitale Anwendungen im Alltag, möchte sich aber nicht 
+lange in neue Systeme einarbeiten.
+
+**Bezug zum System**
+
+Für Markus stehen eine einfache Bedienung und eine 
+verständliche Darstellung der Reiseinformationen im Vordergrund.
+
+---
+
+#### Persona 3: Sofia Rossi
+
+**Rolle:** Internationale Individualreisende  
+**Alter:** 24 Jahre  
+**Beruf:** Studentin  
+**Wohnort:** Mailand  
+**Familienstand:** Ledig  
+
+*"Ich plane meine Reisen meistens spontan und möchte meine 
+Reiseinformationen einfach mit Freunden teilen können."*
+
+**Ziele und Motivation**
+
+- Internationale Reisen flexibel organisieren
+- Mehrere Reiseziele und Buchungen verwalten
+- Reiseinformationen mit Freunden teilen
+
+**Pain Points und Frustrationen**
+
+- Unterschiedliche Buchungsplattformen im Ausland
+- Verschiedene Sprachen und Zeitzonen
+- Unübersichtliche Reiseinformationen auf dem Smartphone
+
+**Verhalten und Technik**
+
+Sofia reist regelmäßig mit Freunden und organisiert ihre Reisen 
+hauptsächlich über das Smartphone. Sie nutzt häufig soziale Medien 
+und probiert gerne neue Anwendungen aus.
+
+**Bezug zum System**
+
+Für Sofia sind die mobile Nutzung, die Unterstützung 
+verschiedener Sprachen und Zeitzonen sowie das einfache 
+Teilen von Reiseinformationen wichtig.
 
 # Randbedingungen {#section-architecture-constraints}
 
